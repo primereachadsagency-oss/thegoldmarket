@@ -1,106 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stock Education Hub – Start Learning</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TH Gold Signals™ — Telegram Channel</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --gold-primary: #D4AF37;
+    --gold-light: #F4D03F;
+    --gold-bright: #FFD700;
+    --gold-deep: #B8860B;
+    --gold-dark: #8B6914;
+    --bg-black: #050505;
+    --bg-charcoal: #0d0d0d;
+    --bg-card: rgba(20, 18, 10, 0.6);
+    --telegram-blue: #229ED9;
+    --telegram-deep: #0088cc;
+    --text-cream: #F5E6C8;
+    --text-muted: #8a7f6a;
+    --border-gold: rgba(212, 175, 55, 0.25);
+  }
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  * { box-sizing: border-box; }
 
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-black);
+    color: var(--text-cream);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Stock Education Hub – Start Learning">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop">
+  /* === Animated Background Layers === */
+  .bg-gradient {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 50% at 20% 100%, rgba(184, 134, 11, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 100%, rgba(212, 175, 55, 0.06) 0%, transparent 60%),
+      linear-gradient(180deg, #050505 0%, #0a0907 50%, #050505 100%);
+  }
 
-  <!-- Minimal CSS (inline for speed) -->
-  <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #00f0ff;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
-    }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
-    }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
-    }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
-    }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
-    }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
-  </style>
+  /* Subtle gold chart line in background */
+  .chart-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  /* Gold dust canvas */
+  #goldParticles {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* === Main container === */
+  .main-wrap {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* === Hero section === */
+  .hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px 60px;
+    position: relative;
+  }
+
+  .hero-inner {
+    max-width: 720px;
+    width: 100%;
+    text-align: center;
+    animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Logo */
+  .logo-wrap {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-glow {
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 70%);
+    filter: blur(20px);
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+
+  .logo-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep), var(--gold-primary)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: spin 12s linear infinite;
+  }
+
+  .logo-ring-inner {
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    animation: spin 20s linear infinite reverse;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .logo-core {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #2a2418 0%, #0d0b06 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      inset 0 0 30px rgba(212, 175, 55, 0.2),
+      0 10px 40px rgba(212, 175, 55, 0.25);
+  }
+
+  .logo-icon {
+    font-size: 48px;
+    background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-primary) 50%, var(--gold-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+  }
+
+  /* Badge */
+  .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--border-gold);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+  }
+
+  .verified-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-bright);
+    box-shadow: 0 0 8px var(--gold-bright);
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* Title */
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(38px, 7vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    background: linear-gradient(180deg, #FFF8E1 0%, var(--gold-bright) 40%, var(--gold-primary) 70%, var(--gold-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+
+  .title .tm {
+    font-size: 0.5em;
+    vertical-align: super;
+    color: var(--gold-primary);
+    -webkit-text-fill-color: var(--gold-primary);
+    margin-left: 4px;
+    font-weight: 400;
+  }
+
+  .subtitle-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin: 0 0 24px;
+  }
+
+  .subtitle-label .line {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--gold-primary);
+    vertical-align: middle;
+    margin: 0 12px;
+    opacity: 0.5;
+  }
+
+  /* Description */
+  .description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(245, 230, 200, 0.7);
+    max-width: 520px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+  }
+
+  .description strong {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* === CTA Button === */
+  .cta-wrap {
+    margin-bottom: 14px;
+    position: relative;
+  }
+
+  .cta-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 42px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2A9CC8 0%, #229ED9 50%, #1A7BA8 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+      0 10px 30px rgba(34, 158, 217, 0.35),
+      0 0 60px rgba(34, 158, 217, 0.15);
+    letter-spacing: 0.02em;
+  }
+
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .cta-btn:hover::before {
+    left: 100%;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+      0 15px 40px rgba(34, 158, 217, 0.5),
+      0 0 80px rgba(34, 158, 217, 0.25);
+  }
+
+  .cta-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .cta-btn .tg-icon {
+    font-size: 22px;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
+  }
+
+  /* Pulsing ring around CTA */
+  .cta-pulse {
+    position: absolute;
+    inset: -4px;
+    border-radius: 16px;
+    border: 1px solid rgba(34, 158, 217, 0.4);
+    animation: pulseRing 2.5s ease-out infinite;
+    pointer-events: none;
+  }
+
+  .cta-pulse.delay { animation-delay: 1.25s; }
+
+  @keyframes pulseRing {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.2); opacity: 0; }
+  }
+
+  .tap-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .tap-hint i {
+    font-size: 10px;
+    color: var(--gold-primary);
+  }
+
+  /* Stats strip */
+  .stats-strip {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--gold-bright);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* === Features Section === */
+  .features {
+    padding: 60px 24px 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .features-grid { grid-template-columns: 1fr; }
+    .stats-strip { gap: 28px; }
+  }
+
+  .feature-card {
+    position: relative;
+    padding: 32px 24px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.01) 100%);
+    border: 1px solid var(--border-gold);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+    opacity: 0.5;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.02) 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(212, 175, 55, 0.1);
+  }
+
+  .feature-icon-wrap {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.05));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .feature-icon-wrap i {
+    font-size: 22px;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .feature-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-cream);
+    margin: 0 0 8px;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* === Footer === */
+  footer {
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    padding: 32px 24px;
+    background: rgba(5, 5, 5, 0.6);
+    backdrop-filter: blur(10px);
+  }
+
+  .footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .footer-links a:hover {
+    color: var(--gold-light);
+  }
+
+  .footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold-primary);
+    transition: width 0.3s ease;
+  }
+
+  .footer-links a:hover::after {
+    width: 100%;
+  }
+
+  .copyright {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .copyright .gold-text {
+    color: var(--gold-primary);
+    font-weight: 500;
+  }
+
+  /* Decorative corner ornaments */
+  .corner-ornament {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0.3;
+  }
+
+  .corner-ornament.top-left {
+    top: 20px;
+    left: 20px;
+  }
+
+  .corner-ornament.bottom-right {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 720px) {
+    .corner-ornament { display: none; }
+    .features { padding: 40px 24px 60px; }
+    .hero { padding: 60px 20px 40px; }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Live indicator ticker */
+  .live-ticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--gold-light);
+    margin-top: 18px;
+    padding: 6px 12px;
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 999px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    background: #4ade80;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #4ade80;
+    animation: blink 1.5s ease-in-out infinite;
+  }
+</style>
 </head>
 <body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Stock Education Hub – Start Learning</h1>
-    <p class="sub">Education only – no investment advice</p>
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+<!-- Background layers -->
+<div class="bg-gradient"></div>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+<svg class="chart-bg" viewBox="0 0 1200 800" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="chartLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B8860B" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#FFD700" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#B8860B" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <path id="chartPath" d="M0,500 L100,450 L200,480 L300,400 L400,420 L500,350 L600,380 L700,300 L800,330 L900,250 L1000,280 L1100,200 L1200,230 L1200,800 L0,800 Z" 
+        fill="url(#chartGrad)"/>
+  <path d="M0,500 L100,450 L200,480 L300,400 L400,420 L500,350 L600,380 L700,300 L800,330 L900,250 L1000,280 L1100,200 L1200,230" 
+        fill="none" stroke="url(#chartLine)" stroke-width="1.5"/>
+</svg>
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp2.html" rel="nofollow">Start Learning</a>
+<canvas id="goldParticles"></canvas>
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+<!-- Corner ornaments -->
+<svg class="corner-ornament top-left" viewBox="0 0 100 100">
+  <path d="M5,5 L40,5 M5,5 L5,40 M5,5 L25,25" stroke="#D4AF37" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <circle cx="5" cy="5" r="2" fill="#D4AF37"/>
+</svg>
+<svg class="corner-ornament bottom-right" viewBox="0 0 100 100">
+  <path d="M5,5 L40,5 M5,5 L5,40 M5,5 L25,25" stroke="#D4AF37" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <circle cx="5" cy="5" r="2" fill="#D4AF37"/>
+</svg>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+<div class="main-wrap">
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
-  </main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+      <div class="logo-wrap">
+        <div class="logo-glow"></div>
+        <div class="logo-ring"></div>
+        <div class="logo-ring-inner"></div>
+        <div class="logo-core">
+          <i class="fas fa-coins logo-icon"></i>
+        </div>
+      </div>
+
+      <div class="verified-badge">
+        <span class="dot"></span>
+        <span>Verified Premium Channel</span>
+      </div>
+
+      <div class="subtitle-label">
+        <span class="line"></span>
+        Telegram Channel
+        <span class="line"></span>
+      </div>
+
+      <h1 class="title">TH Gold Signals<span class="tm">™</span></h1>
+
+      <p class="description">
+        Precision-crafted <strong>XAUUSD trading signals</strong> delivered in real-time. 
+        Join thousands of traders receiving daily market analysis, entry zones, and risk-managed 
+        trade setups from seasoned gold specialists.
+      </p>
+
+      <div class="cta-wrap">
+        <a href="https://t.me/+0Ulu1ESSoOdhZmVl" class="cta-btn" target="_blank" rel="noopener">
+          <i class="fab fa-telegram-plane tg-icon"></i>
+          <span>Join Telegram Channel</span>
+        </a>
+        <div class="cta-pulse"></div>
+        <div class="cta-pulse delay"></div>
+      </div>
+
+      <div class="tap-hint">
+        <i class="fas fa-hand-pointer"></i>
+        Tap to open in Telegram
+      </div>
+
+      <div class="live-ticker">
+        <span class="live-dot"></span>
+        <span>XAUUSD active • Signal room online</span>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stat-item">
+          <div class="stat-num" data-target="48">0</div>
+          <div class="stat-label">K Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="2.4">0</div>
+          <div class="stat-label">K Signals Sent</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="87">0</div>
+          <div class="stat-label">% Win Rate</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-grid">
+
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3 class="feature-title">Daily Updates</h3>
+        <p class="feature-desc">Fresh signals and market analysis delivered every trading day, straight to your Telegram.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap">
+          <i class="fas fa-shield-halved"></i>
+        </div>
+        <h3 class="feature-title">100% Honest</h3>
+        <p class="feature-desc">Transparent track record. No manipulated results — every signal is documented with real entry and exit.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3 class="feature-title">Free to Join</h3>
+        <p class="feature-desc">No subscription, no hidden fees. Premium-quality gold signals accessible to everyone, free forever.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="copyright">
+        © 2026 <span class="gold-text">TH Gold Signals™</span>. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // === Gold particle system ===
+  const canvas = document.getElementById('goldParticles');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  let W, H;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  class Particle {
+    constructor() {
+      this.reset();
+      this.y = Math.random() * H;
+    }
+    reset() {
+      this.x = Math.random() * W;
+      this.y = H + Math.random() * 100;
+      this.size = Math.random() * 2 + 0.4;
+      this.speedY = Math.random() * 0.6 + 0.2;
+      this.speedX = (Math.random() - 0.5) * 0.3;
+      this.opacity = Math.random() * 0.6 + 0.2;
+      this.flicker = Math.random() * 0.02;
+      this.phase = Math.random() * Math.PI * 2;
+    }
+    update() {
+      this.y -= this.speedY;
+      this.x += this.speedX + Math.sin(this.phase) * 0.3;
+      this.phase += 0.02;
+      this.opacity += (Math.random() - 0.5) * this.flicker;
+      this.opacity = Math.max(0.1, Math.min(0.9, this.opacity));
+      if (this.y < -10) this.reset();
+    }
+    draw() {
+      const r = Math.max(0.1, this.size);
+      const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, r * 4);
+      grad.addColorStop(0, `rgba(255, 215, 0, ${this.opacity})`);
+      grad.addColorStop(0.4, `rgba(212, 175, 55, ${this.opacity * 0.5})`);
+      grad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, r * 4, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = `rgba(255, 240, 180, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  const PARTICLE_COUNT = window.innerWidth < 720 ? 40 : 80;
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push(new Particle());
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // === Animated background chart line ===
+  const chartPath = document.getElementById('chartPath');
+  let chartPhase = 0;
+  
+  function animateChart() {
+    chartPhase += 0.005;
+    const points = [];
+    for (let i = 0; i <= 12; i++) {
+      const x = i * 100;
+      const baseY = 400 + Math.sin(chartPhase + i * 0.5) * 60 + Math.cos(chartPhase * 0.7 + i * 0.3) * 40;
+      points.push(`${x},${baseY}`);
+    }
+    const pathD = 'M' + points.join(' L') + ` L1200,800 L0,800 Z`;
+    const lineD = 'M' + points.join(' L');
+    chartPath.setAttribute('d', pathD);
+    chartPath.nextElementSibling.setAttribute('d', lineD);
+    requestAnimationFrame(animateChart);
+  }
+  animateChart();
+
+  // === Counter animation ===
+  function animateCounter(el, target) {
+    const isDecimal = target % 1 !== 0;
+    const duration = 1800;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = target * eased;
+      el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = isDecimal ? target.toFixed(1) : target;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Trigger counters when page loads
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.stat-num').forEach(el => {
+        const target = parseFloat(el.dataset.target);
+        animateCounter(el, target);
+      });
+    }, 600);
+  });
+
+  // === Scroll reveal ===
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.15}s`;
+    observer.observe(el);
+  });
+
+  // === Subtle parallax on hero ===
+  const heroInner = document.querySelector('.hero-inner');
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 8;
+    const y = (e.clientY / window.innerHeight - 0.5) * 8;
+    heroInner.style.transform = `translate(${x}px, ${y}px)`;
+  });
+  heroInner.style.transition = 'transform 0.4s ease-out';
+</script>
+
 </body>
 </html>
