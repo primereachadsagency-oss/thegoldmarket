@@ -7,6 +7,21 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Meta Pixel Code Placeholder -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+// fbq('init', 'YOUR_PIXEL_ID');
+// fbq('track', 'PageView');
+</script>
+
 <style>
   :root {
     --gold-primary: #D4AF37;
@@ -156,15 +171,14 @@
     box-shadow:
       inset 0 0 30px rgba(212, 175, 55, 0.2),
       0 10px 40px rgba(212, 175, 55, 0.25);
+    overflow: hidden;
   }
 
-  .logo-icon {
-    font-size: 48px;
-    background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-primary) 50%, var(--gold-deep) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+  .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   /* Badge */
@@ -466,11 +480,11 @@
     margin: 0;
   }
 
-  /* === Footer === */
+  /* === Footer & Promotional Banner === */
   footer {
     border-top: 1px solid rgba(212, 175, 55, 0.1);
-    padding: 32px 24px;
-    background: rgba(5, 5, 5, 0.6);
+    padding: 32px 24px 40px;
+    background: rgba(5, 5, 5, 0.8);
     backdrop-filter: blur(10px);
   }
 
@@ -478,16 +492,17 @@
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 24px;
+    text-align: center;
   }
 
   .footer-links {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .footer-links a {
@@ -503,21 +518,6 @@
     color: var(--gold-light);
   }
 
-  .footer-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold-primary);
-    transition: width 0.3s ease;
-  }
-
-  .footer-links a:hover::after {
-    width: 100%;
-  }
-
   .copyright {
     font-size: 12px;
     color: var(--text-muted);
@@ -527,6 +527,46 @@
   .copyright .gold-text {
     color: var(--gold-primary);
     font-weight: 500;
+  }
+
+  /* ShriRam Media Agency Promo Link Box */
+  .agency-promo {
+    margin-top: 8px;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(5, 5, 5, 0.4) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(245, 230, 200, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .agency-promo strong {
+    color: var(--gold-bright);
+    font-weight: 600;
+  }
+
+  .agency-promo i {
+    font-size: 11px;
+    color: var(--gold-primary);
+    transition: transform 0.3s ease;
+  }
+
+  .agency-promo:hover {
+    border-color: var(--gold-bright);
+    background: rgba(212, 175, 55, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+    color: #FFF;
+  }
+
+  .agency-promo:hover i {
+    transform: translateX(3px);
   }
 
   /* Decorative corner ornaments */
@@ -638,7 +678,7 @@
         <div class="logo-ring"></div>
         <div class="logo-ring-inner"></div>
         <div class="logo-core">
-          <i class="fas fa-coins logo-icon"></i>
+          <img src="https://market.smagency.in/wp-content/uploads/2026/07/thegold.jpeg" alt="TH Gold Signals Logo" class="logo-img">
         </div>
       </div>
 
@@ -662,7 +702,7 @@
       </p>
 
       <div class="cta-wrap">
-        <a href="https://t.me/+0Ulu1ESSoOdhZmVl" class="cta-btn" target="_blank" rel="noopener">
+        <a href="https://t.me/+0Ulu1ESSoOdhZmVl" class="cta-btn track-subscriber" target="_blank" rel="noopener">
           <i class="fab fa-telegram-plane tg-icon"></i>
           <span>Join Telegram Channel</span>
         </a>
@@ -735,18 +775,56 @@
       <div class="copyright">
         © 2026 <span class="gold-text">TH Gold Signals™</span>. All rights reserved.
       </div>
+      
       <div class="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
         <a href="#">Disclaimer</a>
         <a href="#">Contact</a>
       </div>
+
+      <!-- ShriRam Media Agency Promotional Link (Center Aligned) -->
+      <a href="https://t.me/+TA9C02ZXgzBjY2U9" target="_blank" rel="noopener" class="agency-promo">
+        <span>Designed & Advertised by <strong>ShriRam Media Agency</strong></span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
     </div>
   </footer>
 
 </div>
 
 <script>
+  // === Subscriber Event Tracking Setup ===
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".track-subscriber");
+    
+    buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        // Meta (Facebook) Pixel Tracking
+        if (typeof fbq !== "undefined") {
+          fbq('track', 'Subscribe');
+          fbq('track', 'Lead');
+        }
+        
+        // Google Analytics (gtag.js) Tracking
+        if (typeof gtag !== "undefined") {
+          gtag('event', 'subscribe', {
+            'event_category': 'Telegram',
+            'event_label': 'Join TH Gold Telegram Click'
+          });
+        }
+
+        // Google Tag Manager (dataLayer) Tracking
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            'event': 'subscriber_click',
+            'channel': 'TH Gold Signals'
+          });
+        }
+      });
+    });
+  });
+
   // === Gold particle system ===
   const canvas = document.getElementById('goldParticles');
   const ctx = canvas.getContext('2d');
